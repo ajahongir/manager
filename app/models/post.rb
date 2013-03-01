@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   attr_accessible :name
   
   scope :removable, lambda { 
-    select("posts.*, IF((SELECT count(*) FROM employees WHERE employees.post_id = posts.id) > 0, true, false) as busy")
+    select("posts.*, (case when (SELECT count(*) FROM employees WHERE employees.post_id = posts.id) > 5 then true else false end) as busy")
   }
 
   def busy?
