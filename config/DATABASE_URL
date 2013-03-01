@@ -1,5 +1,0 @@
-development:
-  adapter: mysql2
-  host: localhost
-  username: user
-  database: manager
