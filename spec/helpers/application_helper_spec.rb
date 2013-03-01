@@ -30,4 +30,13 @@ describe ApplicationHelper do
       expect(helper.active_page(controller)).to eq("active")
     }
   end
+
+  describe "#pagination_params" do
+    it "clear action and id" do
+      params = { 'action' => 'show', 'id' => 1 }
+      helper.stub!(:params).and_return(params)
+      expect(helper.pagination_params).to eq({})
+    end
+  end
+
 end

@@ -33,7 +33,7 @@
     <tr>
       <td colspan="3">
         <%= will_paginate @posts, class: 'pagination pagination-centered', 
-                                  params: params.reject{ |key, value| %w(id action).include? key } %>
+                                  params: pagination_params %>
       </td>
     </tr>
   </tbody>

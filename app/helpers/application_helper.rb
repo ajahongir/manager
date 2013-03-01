@@ -10,7 +10,7 @@ module ApplicationHelper
         <div class="sort">
           #{ ("<div class='sort-" + direction + "'></div>") if column == sort_column }
         </div>
-        <a href='#{ url_for(params.merge(sort: column, direction: direction, page: nil)) }'>#{ title }</a>
+        <a href='#{ url_for(pagination_params.merge(sort: column, direction: direction, page: nil)) }'>#{ title }</a>
       </th> 
     tag
     col.html_safe
@@ -20,4 +20,7 @@ module ApplicationHelper
     'active' if params[:controller] == controller_name
   end
 
+  def pagination_params
+    params.reject{ |key, value| %w(id action).include? key }
+  end
 end
