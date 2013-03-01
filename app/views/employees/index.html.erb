@@ -1,0 +1,26 @@
+<div id="employees">
+  <%= render "employees" %>
+</div>
+
+<%= link_to t("helpers.links.new"),
+            new_employee_path,
+            class: 'btn btn-primary'%>
+
+
+<% content_for :navigation_items do %>
+  <li class="divider-vertical dropdown">
+    <div class="input-append" style="padding-top: 5px;">
+      <select id="employees_status">
+        <option value='' selected >All</option>
+        <option value='true' >Active</option>
+        <option value='false' >Inactive</option>
+      </select>
+      <span class="add-on icon-filter">Status</span>
+    </div>
+  </li>
+  <li class="divider-vertical">
+    <%= form_tag employees_path, method: 'get', id: "employees_search", class: "navbar-search pull-left" do %>
+      <%= text_field_tag :search, params[:search], class: "search-query span2", placeholder: "Search" %>
+    <% end %>
+  </li> 
+<% end %>

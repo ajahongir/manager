@@ -1,0 +1,17 @@
+login: &login
+  adapter: mysql2
+  host: localhost
+  username: root
+  password: root
+
+development:
+  database: employee_development
+  <<: *login
+
+test:
+  database: employee_test
+  <<: *login
+
+production:
+  database: employee_production
+  <<: *login

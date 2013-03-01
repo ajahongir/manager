@@ -1,0 +1,48 @@
+Post.create name: "Web developer"
+Post.create name: "Employee Training & Development"
+Post.create name: "Business Knowledge Management"
+Post.create name: "Performance Management"
+Post.create name: "Financial Management"
+
+
+Employee.create status: true, post_id: 1, phone: '99890999999999', name: 'Leisa Lainez'
+Employee.create status: false, post_id: 2, phone: '99890999999999', name: 'Kenyatta Mccurley'
+Employee.create status: true, post_id: 3, phone: '99890999999999', name: 'Irish Cheever'
+Employee.create status: false, post_id: 4, phone: '99890999999999', name: 'Zachary Montville'
+Employee.create status: true, post_id: 5, phone: '99890999999999', name: 'Bonnie Clingan'
+Employee.create status: true, post_id: 1, phone: '99890999999999', name: 'Dodie Beres'
+Employee.create status: false, post_id: 2, phone: '99890999999999', name: 'Charlena Revell'
+Employee.create status: true, post_id: 3, phone: '99890999999999', name: 'Hilde Hinesley'
+Employee.create status: false, post_id: 4, phone: '99890999999999', name: 'Marcelene Casares'
+Employee.create status: true, post_id: 5, phone: '99890999999999', name: 'Lovie Bailer'
+
+Employee.create status: false, post_id: 1, phone: '99890999999999', name: 'Toby Cecil'
+Employee.create status: false, post_id: 1, phone: '99890999999999', name: 'Shea Rahe'
+Employee.create status: false, post_id: 1, phone: '99890999999999', name: 'August Hintz'
+Employee.create status: false, post_id: 1, phone: '99890999999999', name: 'Eveline Warlick'
+Employee.create status: false, post_id: 1, phone: '99890999999999', name: 'Consuela Underwood'
+Employee.create status: false, post_id: 1, phone: '99890999999999', name: 'Shery Odell'
+Employee.create status: true, post_id: 1, phone: '99890999999999', name: 'Kisha Pickle'
+Employee.create status: true, post_id: 1, phone: '99890999999999', name: 'Christia Shelley'
+Employee.create status: true, post_id: 2, phone: '99890999999999', name: 'Nita Ristow'
+Employee.create status: true, post_id: 2, phone: '99890999999999', name: 'Genna Maclachlan'
+Employee.create status: true, post_id: 2, phone: '99890999999999', name: 'Bella Silveria'
+Employee.create status: true, post_id: 2, phone: '99890999999999', name: 'Gaynelle Marlowe'
+Employee.create status: false, post_id: 5, phone: '99890999999999', name: 'Eddie Alfano'
+Employee.create status: false, post_id: 5, phone: '99890999999999', name: 'Tatum Zenz'
+Employee.create status: false, post_id: 5, phone: '99890999999999', name: 'Anibal Skeeter'
+Employee.create status: true, post_id: 3, phone: '99890999999999', name: 'Otto Mungin'
+Employee.create status: true, post_id: 3, phone: '99890999999999', name: 'Fredia Darlington'
+Employee.create status: true, post_id: 3, phone: '99890999999999', name: 'Florrie Stirling'
+Employee.create status: false, post_id: 3, phone: '99890999999999', name: 'Sumiko Cargo'
+Employee.create status: false, post_id: 3, phone: '99890999999999', name: 'Alease Bischoff'
+Employee.create status: false, post_id: 3, phone: '99890999999999', name: 'Klara Gunn'
+Employee.create status: false, post_id: 3, phone: '99890999999999', name: 'Franchesca Thibeaux'
+Employee.create status: false, post_id: 4, phone: '99890999999999', name: 'Christiane Baines'
+Employee.create status: false, post_id: 4, phone: '99890999999999', name: 'Whitney Hammill'
+Employee.create status: true, post_id: 4, phone: '99890999999999', name: 'Burl Saur'
+Employee.create status: true, post_id: 4, phone: '99890999999999', name: 'Annalee Treacy'
+Employee.create status: true, post_id: 4, phone: '99890999999999', name: 'Elsy Tank'
+Employee.create status: true, post_id: 4, phone: '99890999999999', name: 'Delilah Meek'
+Employee.create status: true, post_id: 4, phone: '99890999999999', name: 'Rochel Andreotti'
+Employee.create status: true, post_id: 5, phone: '99890999999999', name: 'Shin Neeley'

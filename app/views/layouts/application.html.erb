@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manager</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    
+    <div class="container">
+      
+      <div class="page-header">
+        <h1><%= t("pages.titles.#{ params[:controller] }") %></h1>
+      </div>
+
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="<%= root_path %>"><i class="icon-home icon-white"></i> Manager</a>
+          <ul class="nav">
+            <li class="divider-vertical <%= active_page('employees') %>">
+              <%= link_to "Employees", employees_path %>
+            </li>
+            <%= content_for :navigation_items %>
+            <li class="divider-vertical <%= active_page('posts') %>">
+              <%= link_to "Posts", posts_path %>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <%= yield %>
+
+    </div>
+
+  </body>
+</html>

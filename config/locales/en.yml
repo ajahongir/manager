@@ -1,0 +1,32 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  views:
+    posts:
+      name: Name
+    employees:
+     status: Status
+
+  controllers:
+    employees:
+      flash:
+        delete: "Employee was successfully deleted."
+        update: "Employee was successfully updated."
+        create: "Employee was successfully created."
+
+    posts:
+      flash:
+        create: "Post was successfully created."
+        delete: "Post was successfully deleted."
+        update: "Post was successfully updated."
+        busy: "Post is already in use."
+
+  models:
+  pages:
+    titles:
+      employees: Employees
+      posts: Posts
+
+  brand: Manager

@@ -1,0 +1,45 @@
+<%= render "layouts/flash_messages" %>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th class="icon-user column-id"></th>
+      <%= sortable "first_name" %>
+      <%= sortable "last_name" %>
+      <%= sortable "phone" %>
+      <%= sortable "post_id", "Post" %>
+      <th><%= t("views.employees.status") %></th>
+      <th class="column-action"><%= t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.id %></td>
+        <td><%= employee.first_name %></td>
+        <td><%= employee.last_name %></td>
+        <td><%= employee.phone %></td>
+        <td><%= employee.post_name %></td>
+        <td>
+          <%= check_box_tag nil, nil, employee.status, disabled: true %>
+        <td>
+          <%= link_to t('.edit', default: t("helpers.links.edit")), 
+                      edit_employee_path(employee), class: 'btn btn-mini' %>
+          <%= link_to t("helpers.links.destroy"),
+                      employee_path(employee, sort: sort_column, direction: sort_direction, page: params[:page], status: params[:status], search: params[:search]),
+                      method: :delete,
+                      remote: true,
+                      :"data-replace" =>  '#employees',
+                      data: { confirm: t("helpers.links.confirm") },
+                      class: 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+    <tr>
+      <td colspan="7">
+        <%= will_paginate @employees, class: 'pagination pagination-centered', 
+                                      params: params.reject{ |key, value| %w(id action).include? key } %>
+      </td>
+    </tr>
+  </tbody>
+</table>

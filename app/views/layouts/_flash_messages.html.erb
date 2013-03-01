@@ -1,0 +1,10 @@
+<% flash.each do |name, message| %>
+  <div class="alert alert-<%= name == :notice ? 'success' : 'error' %>">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><%= message %></strong>
+  </div>
+<% end %>
+
+<%= javascript_tag do %>
+  $('.alert').fadeOut(5000);
+<% end %>
